@@ -7,7 +7,7 @@
 > Collection of things I learn daily
 
 ![whoa](https://cldup.com/ySsW5oPwZp.gif)  
-<small style="color: gray;">tfw you learn something new</small>
+tfw you learn something new
 
 ## Inspiration
 
