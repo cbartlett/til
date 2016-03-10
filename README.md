@@ -1,37 +1,20 @@
+[author]: http://rinaldi.io
+[cc0]: http://creativecommons.org/publicdomain/zero/1.0
+[thoughtbot-til]: https://github.com/thoughtbot/til
+
 # til
 
-> Collection of things I learn daily while working on web development
+> Collection of things I learn daily
 
-## TOC
+![whoa](https://cldup.com/ySsW5oPwZp.gif)  
+<small style="color: gray;">tfw you learn something new</small>
 
-* [Bash](#bash)
-* [CSS](#css)
-* [Design](#design)
-* [Git](#git)
-* [JavaScript](#javascript)
-* [Vim](#vim)
+## Inspiration
 
-### Bash
-### CSS
-### Design
-### Git
-### JavaScript
-### Vim
-
-## Motivation
-
-I have at least three different versions of my personal blog rotting on my HD and I never really put it online. Decided to create this repository as an easy way to share knowledge and also have a personal reference for things I learn.
-
-### Inspiration
-
-* [@thoughtbot](https://github.com/thoughtbot/til)
-* [@rstacruz](http://ricostacruz.com/til)
-* [@hashrocket](https://til.hashrocket.com)
-* [@jwworth](https://github.com/jwworth/til)
-* [@jbranchaud](https://github.com/jbranchaud/til)
+* [thoughtbot's `til`][thoughtbot-til]
 
 ## License
 
-[![CC0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](http://creativecommons.org/publicdomain/zero/1.0)
+[![CC0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)][cc0]
 
-To the extent possible under law, [Rafael Rinaldi](http://rinaldi.io) has waived all copyright and related or neighboring rights to this work.
+To the extent possible under law, [Rafael Rinaldi][author] has waived all copyright and related or neighboring rights to this work.
