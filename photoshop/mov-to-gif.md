@@ -15,7 +15,7 @@ This is my preferred way to create GIF animations using Photoshop and QuickTime.
 * QuickTime 10
 * Adobe Photoshop CC 2015
 
-<small>It might work in lower versions tho</small>
+It might work in lower versions tho.
 
 ## Steps
 
