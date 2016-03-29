@@ -1,6 +1,7 @@
 [back]: https://github.com/rafaelrinaldi/til/tree/master/npm
 [npm]: https://npmjs.org
 [promzard]: https://github.com/npm/promzard
+[npm-init]: https://github.com/rafaelrinaldi/dotfiles/blob/master/npm-init.js
 
 # npm init
 
@@ -85,7 +86,7 @@ The `-y` flag is optional here but will provide a less verbose output:
 $ npm init -y
 Module name: (best-module-ever)
 Description: (Best module ever published)
-Wrote to /Users/rafaelrinaldi/Dropbox/dev/til/package.json:
+Wrote to /Users/jarvis/dev/best-module-ever/package.json:
 
 {
   "name": "best-module-ever",
@@ -101,7 +102,7 @@ Wrote to /Users/rafaelrinaldi/Dropbox/dev/til/package.json:
 }
 ```
 
-Still works! 🦄
+Cool, isn't it? [This is the one I use][npm-init].
 
 Having a custom manifest format setup is useful to enforce consistency on your modules without relying on external tools like generators.
 
