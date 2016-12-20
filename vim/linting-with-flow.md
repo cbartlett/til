@@ -77,8 +77,8 @@ That's it! With this configuration in my place, this is how my Vim looks like:
 
 ## Credits
 
-- [*@ryyppy*](https://github.com/ryyppy) for the pretty print plugin
-- [*@ahmedelgabri*](https://github.com/ahmedelgabri) for the dynamic Flow path resolution idea
+- [**@ryyppy**](https://github.com/ryyppy) for the pretty print plugin
+- [**@ahmedelgabri**](https://github.com/ahmedelgabri) for the dynamic Flow path resolution idea
 
 ---
 
