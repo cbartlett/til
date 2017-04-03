@@ -8,7 +8,7 @@
 While `branch -a` is helpful, more often than not I want to get the branches list sorted by their modification date.
 
 I recently discovered a neat feature of Git that can be used to accomplish that, it's the [`for-each-ref`][for-each-ref].
-It's pretty much an easy way to loop through the refs list and format the output. A `--format` option is provided where we can specify how the program will spit out the data. It also gives us stuff like hash and reference name for free, which is very convenient.
+It's pretty much an easy way to loop through the refs list and format the output. A `--format` option is provided where we can specify how the program will spit out the data. It also gives us stuff like hash and reference name for free.
 
 ## Putting things together
 
@@ -40,7 +40,7 @@ Much better! You can now just assign it to an alias (I use `git branches`) and y
 
 Personally, most of the times when I want to see a list of branches I also want to switch to them. So why not make that happen with a single command?
 
-One of my favorite CLI tools is [`pick`], built by the awesome people at [Thoughtbot][thoughtbot]. It takes a list of stuff and creates an interactive list out of it (with fuzzy search and everything). We can combine it with the `checkout` command to achieve what we want:
+One of my favorite CLI tools is [`pick`][pick], built by the awesome people at [Thoughtbot][thoughtbot]. It takes a list of stuff and creates an interactive list out of it (with fuzzy search and everything). We can combine it with the `checkout` command to achieve what we want:
 
 ```sh
 $ git checkout $(git for-each-ref --sort='-authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads | pick | cut -f2)
