@@ -16,7 +16,7 @@ The most accurate and consistent way I found to properly list branches by date w
 
 ```sh
 $ git for-each-ref --sort='-authordate:iso8601' --format='%(refname)' refs/heads
-refs/heads/fix/caffe-macs-endpoint
+refs/heads/fix/caffe-endpoint
 refs/heads/master
 refs/heads/fix/article-order
 refs/heads/fix/pagination-german
@@ -27,26 +27,37 @@ This does the job but it's also nice to see when a branch was modified alongside
 
 ```sh
 $ git for-each-ref --sort='-authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads
- 17 hours ago	fix/caffe-macs-endpoint
+ 17 hours ago	fix/caffe-endpoint
  3 days ago	master
  4 days ago	fix/article-order
  5 days ago	fix/pagination-german
  5 days ago	fix/intl-errors
 ```
 
-Much better! You can now just assign it to an alias (I use `git branches`) and you're good to go.
+Much better.
 
 ## Taking it to the next level
 
-Personally, most of the times when I want to see a list of branches I also want to switch to them. So why not make that happen with a single command?
+Personally, most of the times when I want to see a list of branches I also want to switch to them right away. So why not make that happen with a single command?
 
-One of my favorite CLI tools is [`pick`][pick], built by the awesome people at [Thoughtbot][thoughtbot]. It takes a list of stuff and creates an interactive list out of it (with fuzzy search and everything). We can combine it with the `checkout` command to achieve what we want:
+One of my favorite CLI tools is [`pick`][pick], built by the awesome people at [Thoughtbot][thoughtbot]. It takes a list of stuff and creates an interactive list view out of it. We can combine it with the `checkout` command to achieve exactly what we want:
 
 ```sh
 $ git checkout $(git for-each-ref --sort='-authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads | pick | cut -f2)
 ```
 
 ![Interactive List](git-checkout-pick.gif)
+
+Pretty useful isn't?
+
+## Use it as a Git alias
+
+I personally like to assign helpers like this to Git aliases. You can do that by editing your `$HOME/.gitconfig` file:
+
+```gitconfig
+[alias]
+  branches = "!sh -c \"git checkout $(git for-each-ref --sort='-authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads | pick | cut -f2)\""
+```
 
 ---
 
