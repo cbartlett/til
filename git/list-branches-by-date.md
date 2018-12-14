@@ -1,5 +1,6 @@
 [back]: https://github.com/rafaelrinaldi/til/tree/master/git
 [for-each-ref]: https://git-scm.com/docs/git-for-each-ref
+[fzf]: https://github.com/junegunn/fzf
 [pick]: https://github.com/calleerlandsson/pick
 [thoughtbot]: https://thoughtbot.com
 
@@ -47,6 +48,14 @@ $ git checkout $(git for-each-ref --sort='-authordate:iso8601' --format=' %(auth
 ```
 
 ![Interactive List](git-checkout-pick.gif)
+
+### fzf
+
+You can also use [`fzf`][fzf] to accomplish the same thing.
+
+```
+$ git checkout $(git for-each-ref --sort='-authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads | cut -f2 | fzf)
+```
 
 Pretty useful isn't?
 
